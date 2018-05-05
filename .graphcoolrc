@@ -1,3 +1,0 @@
-targets:
-  prod: shared-eu-west-1/cjgmbdplk4nw40123gbcks285
-  default: prod

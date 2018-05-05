@@ -20,8 +20,6 @@ types: ./types.graphql
 
 functions:
 
-# added by email-password template: (please uncomment)
-
    signup:
      type: resolver
      schema: src/email-password/signup.graphql
@@ -40,11 +38,11 @@ functions:
      handler:
        code: src/email-password/loggedInUser.ts
 
-#  hello:
-#    handler:
-#      code: src/hello.js
-#    type: resolver
-#    schema: src/hello.graphql
+   upvote:
+     type: resolver
+     schema: src/upvote.graphql
+     handler:
+       code: src/upvote.js
 
 
 # Model/Relation permissions are used to limit the API access
@@ -57,6 +55,7 @@ permissions:
     fields:
       - id
       - news
+      - username
 
   - operation: News.read
 

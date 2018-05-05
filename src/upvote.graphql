@@ -1,0 +1,8 @@
+type UpvotePayload {
+  id: ID!,
+  points: Int!
+}
+
+extend type Mutation {
+  upvote(id: ID!): UpvotePayload
+}
