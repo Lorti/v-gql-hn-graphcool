@@ -58,10 +58,20 @@ permissions:
       - username
       - news
 
-  - operation: News.read
+  - operation: User.update
+    authenticated: true
+    fields:
+      - username
+    query: src/permission-queries/permitUpdateUser.graphql
 
   - operation: News.create
     authenticated: true
+
+  - operation: News.read
+
+  - operation: News.delete
+    authenticated: true
+    query: src/permission-queries/permitDeleteNews.graphql
 
   - operation: NewsAuthor.connect
     authenticated: true

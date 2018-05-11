@@ -6,7 +6,7 @@ type User @model {
   email: String! @isUnique
   password: String!
 
-  username: String! @isUnique
+  username: String @isUnique
 
   news: [News!]! @relation(name: "NewsAuthor")
 }

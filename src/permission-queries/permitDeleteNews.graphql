@@ -1,0 +1,8 @@
+query permitDeleteNews($node_id: ID!, $user_id: ID!) {
+  SomeNewsExists(filter: {
+    id: $node_id,
+    author: {
+      id: $user_id
+    }
+  })
+}
